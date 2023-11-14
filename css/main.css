@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css');
+
+:root {
+  --primary: #a77b52;
+  --second: #06b18f;
+  --gray: #7c818b;
+  --dark: #1d2128;
+  --low_radius: 5px;
+  --middle_radius: 10px;
+  --big_radius: 15px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+  outline-color: aqua;
+}
+
+body {
+  background: #fff;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  width: 100%;
+}
+
+i.fi {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+input {
+  border: none;
+  color: inherit;
+  background: inherit;
+  border: 2px solid var(--gray);
+  padding: 10px 15px 12px;
+  border-radius: var(--middle_radius);
+  color: inherit;
+  font-size: 16px;
+  caret-color: var(--primary);
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  padding: 10px 15px;
+  background: var(--primary);
+  display: flex;
+  align-items: center;
+  border: none;
+  color: #fff;
+  border-radius: var(--low_radius);
+  cursor: pointer;
+}
+
+.container {
+  margin: auto;
+  max-width: 1140px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.list {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-size: 12px;
+  color: var(--gray);
+  font-weight: 500;
+}
+
+.list li a {
+  padding: 10px 0;
+  display: flex;
+}
+
+/** Header */
+.header {
+  border-bottom: 1px solid #eaeaea;
+}
+
+.header .logo {
+  max-width: 250px;
+}
+
+.middle_bar {
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+form.search_bar {
+  max-width: 40%;
+  width: 40%;
+  display: flex;
+  align-items: start;
+  position: relative;
+}
+
+form.search_bar input {
+  width: 100%;
+  padding-right: 50px;
+}
+
+form.search_bar button {
+  border-radius: var(--middle_radius);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btns {
+  display: flex;
+  gap: 10px;
+}
+
+.btns a.btn {
+  border-radius: var(--middle_radius);
+  background: var(--primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 500;
+  gap: 5px;
+}
+
+.btns a.no_text {
+  width: 45px;
+  height: 45px;
+
+}
+
+.btns a.primary {
+  padding: 0 15px;
+  height: 45px;
+  width: fit-content;
+  text-transform: uppercase;
+}
+
+/** Main Menu */
+ul.menu {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 20px;
+  color: var(--dark);
+  font-weight: 500;
+  border-top: 1px solid #eaeaea;
+}
+
+ul.menu li a {
+  padding: 15px 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: .2s;
+}
+
+ul.menu li a:before {
+  content: "";
+  height: 2px;
+  width: 0%;
+  background: var(--primary);
+  position: absolute;
+  bottom: 0;
+  left: auto;
+  right: 0;
+  transition: .2s;
+}
+
+ul.menu li a:after {
+  margin: auto;
+  content: "";
+  width: 1px;
+  height: 30%;
+  background: #eaeaea;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -10px;
+}
+
+ul.menu li a:hover {
+  color: var(--primary);
+}
+
+ul.menu li a:hover:before {
+  width: 100%;
+  left: 0;
+  right: auto;
+}
+
+/** Widget Side */
+.widget {
+  margin: 30px auto;
+}
+
+.widget_item {
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  color: var(--dark);
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.widget_item:first-child {
+  padding-left: 0;
+}
+
+.widget_item:last-child {
+  padding-right: 0;
+}
+
+.widget_item img {
+  border-radius: 50%;
+  overflow: hidden;
+  transition: .2s;
+}
+
+.widget_item:hover {
+  color: var(--primary);
+}
+
+.widget_item:hover img {
+  scale: 1.1;
+}
+
+/** Slider */
+.swiper {
+  height: 400px;
+}
